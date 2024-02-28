@@ -1,53 +1,49 @@
 <link rel="stylesheet" href="style.css">
 <script src="main.js" defer></script>
-  <button id="copyButton" style="font-family: 'Century Gothic', sans-serif;">Copy Signature</button>
+<button id="copyButton" style="font-family: 'Century Gothic', sans-serif;">Copy Signature</button>
 
-  <div class="conteneur_choix" style="display: flex; justify-content: space-between; width: 750px;">
-    <form class="boite_informations" style="display: flex; flex-direction: column; width: 250px; padding: 30px; border-radius: 30px;">
-      <h2 style="font-family: 'Century Gothic', sans-serif;">Choix</h2>
-      <label>Nom</label>
-      <input type="checkbox" id="nomCheckbox" checked="true">
-      <label>Titre</label>
-      <input type="checkbox" id="titreCheckbox" checked="true">
-      <label>Titre 2</label>
-      <input type="checkbox" id="titre2Checkbox" checked="true">
-      <label>Téléphone</label>
-      <input type="checkbox" id="telephoneCheckbox" checked="true">
-      <label>Email</label>
-      <input type="checkbox" id="emailCheckbox" checked="true">
-      <label>Site</label>
-      <input type="checkbox" id="siteCheckbox" checked="true">
-    </form>
+<div class="conteneur_choix" style="display: flex; justify-content: space-between; width: 750px;">
+  <form class="boite_informations" style="display: flex; flex-direction: column; width: 250px; padding: 30px; border-radius: 30px;">
+    <h2 style="font-family: 'Century Gothic', sans-serif;">Choix</h2>
+    <label>Nom</label>
+    <input type="checkbox" id="nomCheckbox" checked="true">
+    <label>Titre</label>
+    <input type="checkbox" id="titreCheckbox" checked="true">
+    <label>Titre 2</label>
+    <input type="checkbox" id="titre2Checkbox" checked="true">
+    <label>Téléphone</label>
+    <input type="checkbox" id="telephoneCheckbox" checked="true">
+    <label>Email</label>
+    <input type="checkbox" id="emailCheckbox" checked="true">
+    <label>Site</label>
+    <input type="checkbox" id="siteCheckbox" checked="true">
+  </form>
 
-    <form class="boite_informations" style="display: flex; flex-direction: column; width: 250px; padding: 30px; border-radius: 30px;">
-      <h2 style="font-family: 'Century Gothic', sans-serif;">Informations</h2>
-      <label for="nom">Nom</label>
-      <input type="text" id="nomInput" value="Votre nom">
-      <label for="titre">Titre</label>
-      <input type="text" id="titreInput" value="Votre titre">
-      <label for="titre2">Titre 2</label>
-      <input type="text" id="titre2Input" value="Si besoin d'écrire un autre titre">
-      <label for="telephone">Téléphone</label>
-      <input type="text" id="telephoneInput" value="XXX-YYY-ZZZZ ext ABC">
-      <label for="email">Email</label>
-      <input type="text" id="emailInput" value="votreemail@stanex.com">
-      <label for="site">Site</label>
-      <input type="text" id="siteInput" value="www.stanex.com">
-    </form>
-  </div>
+  <form class="boite_informations" style="display: flex; flex-direction: column; width: 250px; padding: 30px; border-radius: 30px;">
+    <h2 style="font-family: 'Century Gothic', sans-serif;">Informations</h2>
+    <label for="nom">Nom</label>
+    <input type="text" id="nomInput" value="Votre nom">
+    <label for="titre">Titre</label>
+    <input type="text" id="titreInput" value="Votre titre">
+    <label for="titre2">Titre 2</label>
+    <input type="text" id="titre2Input" value="Si besoin d'écrire un autre titre">
+    <label for="telephone">Téléphone</label>
+    <input type="text" id="telephoneInput" value="XXX-YYY-ZZZZ ext ABC">
+    <label for="email">Email</label>
+    <input type="text" id="emailInput" value="votreemail@stanex.com">
+    <label for="site">Site</label>
+    <input type="text" id="siteInput" value="www.stanex.com">
+  </form>
+</div>
 
-  <table style="height: 250px; width: 750px;">
-    <tr>
-      <td class="image test" style="width: 300px; border-right: solid; border-width: 0.5px;">
-        <img src="https://kekcardinal.github.io/signature_stanex/Asset_1.png" style="height: 100%; width: 250px; padding: 0px; margin: 0px;">
-      </td>
-      <td class="signature" style="font-family: 'Century Gothic', sans-serif;display: flex; justify-content: flex-start; align-items: flex-start;">
-        <ul id="signatureList" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;  list-style:none;">
-          <!-- Signature content will be dynamically generated here -->
-        </ul>
-      </td>
-    </tr>
-  </table>
+<table style="height: 250px; width: 750px;">
+  <tr>
+    <td class="image test" style="width: 300px; border-right: solid; border-width: 0.5px;">
+      <img src="https://kekcardinal.github.io/signature_stanex/Asset_1.png" style="height: 100%; width: 250px; padding: 0px; margin: 0px;">
+    </td>
+    <td class="signature" style="font-family: 'Century Gothic', sans-serif;display: flex; justify-content: flex-start; align-items: flex-start; margin-left:20px;">
+      <div id="signatureContent" style="display: flex; flex-direction: column; justify-content: center; height: 100%;"></div>
+    </td>
+  </tr>
+</table>
 
-   <button id="copyButton">Copy Signature</button>
-</body>
