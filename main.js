@@ -1,28 +1,26 @@
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const textInputs = document.querySelectorAll('input[type="text"]');
-const signatureList = document.getElementById("signatureList");
+const signatureContent = document.getElementById("signatureContent");
 const copyButton = document.getElementById("copyButton");
 const signatureTable = document.querySelector("table");
 
-
 copyButton.addEventListener("click", () => {
-      // Select the signature table content
-      const range = document.createRange();
-      range.selectNode(signatureTable);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
+  // Select the signature table content
+  const range = document.createRange();
+  range.selectNode(signatureTable);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
 
-      try {
-        // Copy the selected content
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-        console.log("Signature copied!");
-        alert("Signature copied successfully!");
-      } catch (err) {
-        console.error("Unable to copy signature:", err);
-      }
-    });
-
+  try {
+    // Copy the selected content
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    console.log("Signature copied!");
+    alert("Signature copied successfully!");
+  } catch (err) {
+    console.error("Unable to copy signature:", err);
+  }
+});
 
 function updateSignature() {
   let signatureHTML = "";
@@ -33,11 +31,11 @@ function updateSignature() {
       document.getElementById(textInput.id.replace("Input", "Checkbox")).checked
     ) {
       let inputClass = textInput.id.replace("Input", "-class");
-      signatureHTML += `<li class="${inputClass}">${textInput.value.trim()}</li>`;
+      signatureHTML += `<p class="${inputClass}">${textInput.value.trim()}</p>`;
     }
   });
 
-  signatureList.innerHTML = signatureHTML;
+  signatureContent.innerHTML = signatureHTML;
 }
 
 checkboxes.forEach((checkbox) => {
@@ -50,4 +48,3 @@ textInputs.forEach((textInput) => {
 
 // Initial update
 updateSignature();
-
